@@ -5,10 +5,31 @@
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
 }
+body {
+  width: 1600px;
+}
 
 header {
   background-color: #fff8f3;
+  padding-top: 50px;
 }
 nav {
   display: flex;
+  border: 1px solid #171616;
+  width: 71%;
+  max-width: 1140px;
+  margin: 0px auto;
+  justify-content: space-between;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+header ul a {
+  text-decoration: none;
+  color: black;
 }
