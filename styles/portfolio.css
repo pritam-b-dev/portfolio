@@ -95,3 +95,43 @@ nav .menu a {
   width: 585px;
   vertical-align: middle;
 }
+
+.about {
+  padding-top: 130px;
+}
+.about-container {
+  width: 71%;
+  max-width: 1140px;
+  margin: auto;
+  text-align: center;
+  background-color: #fff8f3;
+  padding: 131px 156px;
+}
+.about-container-experience {
+  max-width: 827px;
+  text-align: center;
+}
+.about-container-experience h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+.about-container-experience p {
+  font-size: 18px;
+  color: #757575;
+  line-height: 30px;
+}
+.about .about-container .about-container-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+}
+
+.about-container-info .info-card p {
+  font-size: 15px;
+  color: #757575;
+  line-height: 30px;
+}
+
+.about-container-info .info-card h4 {
+  font-size: 15px;
+}
