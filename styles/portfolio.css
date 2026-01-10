@@ -13,9 +13,10 @@ header {
   background-color: #fff8f3;
   background: url("../images/developer.png"), url("../images/header_bg.png"),
     #fff8f3;
-  background-position: top left, bottom right;
+  background-position: 23px 38px, bottom right;
   background-repeat: no-repeat;
-  padding-top: 70px;
+  background-size: 90px auto, auto;
+  padding-top: 50px;
 }
 nav {
   display: flex;
@@ -48,14 +49,17 @@ nav .menu a {
 }
 
 .btn {
+  width: 200px;
+  /* height: 64px; */
   background-color: #fd6e0a;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
-  padding: 18px 35px;
+  padding: 18px 20px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .banner {
@@ -181,4 +185,86 @@ nav .menu a {
   font-size: 16px;
   color: #757575;
   line-height: 28px;
+}
+
+.resume {
+  padding-top: 130px;
+  width: 1140px;
+  margin: auto;
+}
+.resume-heading {
+  text-align: center;
+}
+
+.resume-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.resume-container hr {
+  /* top-bottom right-left */
+  margin: 30px 0;
+}
+
+.resume-container .education .edu-card,
+.resume-container .experience .exp-card {
+  width: 511px;
+  height: 175px;
+}
+
+.resume-container .education .edu-card p,
+.resume-container .experience .exp-card p {
+  margin-top: 20px;
+  text-align: left;
+}
+.resume-container .education .edu-card h2,
+.resume-container .experience .exp-card h2 {
+  padding-top: 30px;
+}
+.btn-resume {
+  overflow: hidden;
+  text-align: center;
+}
+
+footer {
+  margin-top: 130px;
+  background-color: #fff8f3;
+  padding: 130px 0px;
+}
+footer .footer-container {
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  gap: 116px;
+}
+
+footer .footer-container .social {
+  max-width: 562px;
+}
+.footer-container h2 {
+  margin-bottom: 20px;
+}
+.footer-container .social p {
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.footer-container .social .icons a {
+  margin-right: 24px;
+}
+
+.form input,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  width: 461px;
+  padding: 18px 31px;
+  border-radius: 5px;
+  border: none;
 }
