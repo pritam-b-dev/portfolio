@@ -261,7 +261,7 @@ export default async function Home() {
                       src={project.thumbnail}
                       alt={project.name}
                       fill
-                      className="object-cover lg:object-contain transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                 )}
@@ -342,7 +342,7 @@ export default async function Home() {
                     src={project.thumbnail}
                     alt={project.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
               )}
