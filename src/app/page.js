@@ -3,7 +3,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import { FaGithub } from "react-icons/fa";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:5000/projects");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/projects`);
   const projects = await res.json();
 
   const featured = projects.filter((p) => p.featured);
@@ -249,9 +249,9 @@ export default async function Home() {
                 boxShadow: "0 0 0 0 transparent",
               }}
             >
-              <div className="md:flex">
+              <div className="flex flex-col md:flex-row">
                 {project.thumbnail && (
-                  <div className="md:w-1/2 h-60 md:h-auto relative">
+                  <div className="w-full md:w-1/2 h-52 md:h-64 relative">
                     <Image
                       src={project.thumbnail}
                       alt={project.name}
@@ -261,7 +261,7 @@ export default async function Home() {
                     />
                   </div>
                 )}
-                <div className="p-8 md:w-1/2 flex flex-col justify-center">
+                <div className="p-6 md:p-8 md:w-1/2 flex flex-col justify-center">
                   <span
                     className="text-xs font-semibold tracking-widest uppercase mb-3"
                     style={{ color: "var(--accent)" }}
