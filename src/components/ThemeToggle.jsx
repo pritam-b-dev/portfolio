@@ -1,15 +1,20 @@
 "use client";
-import { useTheme } from "next-themes";
+import { useTheme } from "./ThemeProvider";
 
 const ThemeToggle = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="fixed top-4 right-4 z-50 p-2 rounded-full bg-gray-800 dark:bg-gray-200 text-white dark:text-black"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="fixed bottom-6 right-6 z-50 p-3 rounded-full shadow-lg"
+      style={{
+        background: "var(--card-bg)",
+        color: "var(--foreground)",
+        border: "1px solid var(--card-border)",
+      }}
     >
-      {resolvedTheme === "dark" ? "☀️" : "🌙"}
+      {theme === "dark" ? "☀️" : "🌙"}
     </button>
   );
 };

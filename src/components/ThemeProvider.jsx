@@ -1,14 +1,22 @@
 "use client";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { createContext, useContext, useEffect, useState } from "react";
+
+const ThemeContext = createContext();
+
+export function useTheme() {
+  return useContext(ThemeContext);
+}
 
 export default function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
+
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem={false}
-    >
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
-    </NextThemesProvider>
+    </ThemeContext.Provider>
   );
 }
