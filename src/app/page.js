@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default async function Home() {
   const res = await fetch("http://localhost:5000/projects");
@@ -6,6 +7,7 @@ export default async function Home() {
 
   return (
     <main>
+      <ThemeToggle />
       {/* Hero */}
       <section>
         <h1>Pritam Bhowmick</h1>
