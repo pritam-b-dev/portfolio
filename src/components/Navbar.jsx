@@ -43,7 +43,7 @@ const Navbar = () => {
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           <span className="font-bold text-xl tracking-tight cursor-pointer">
-            Pritam-B-dev
+            pritam-b-dev
           </span>
         </div>
 
