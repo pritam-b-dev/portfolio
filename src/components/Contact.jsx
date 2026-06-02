@@ -22,7 +22,10 @@ const Contact = () => {
         Open to opportunities. Let&apos;s build something great together.
       </p>
       <div className="flex justify-center gap-4 flex-wrap">
-        <a href="mailto:pritam.bhowmick@ymail.com">
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=pritam.bhowmick@ymail.com"
+          target="_blank"
+        >
           <button
             className="px-8 py-3 font-semibold rounded-xl transition-all duration-200 hover:scale-105 cursor-pointer"
             style={{
