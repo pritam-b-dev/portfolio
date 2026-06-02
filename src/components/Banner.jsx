@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -80,7 +81,7 @@ const Banner = () => {
 
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
         style={{ color: "var(--muted)" }}
         onClick={() =>
           document
