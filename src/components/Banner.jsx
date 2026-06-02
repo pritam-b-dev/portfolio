@@ -82,6 +82,11 @@ const Banner = () => {
       <div
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
         style={{ color: "var(--muted)" }}
+        onClick={() =>
+          document
+            .getElementById("about")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
       >
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
           <path
