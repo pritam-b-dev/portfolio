@@ -43,7 +43,15 @@ const Projects = async () => {
             <div className="flex flex-col lg:flex-row">
               {/* Image */}
               {project.thumbnail && (
-                <div className="w-full lg:w-1/2 aspect-video lg:aspect-auto lg:h-auto relative bg-zinc-900">
+                <div
+                  style={{
+                    background:
+                      "color-mix(in srgb, var(--accent) 12%, var(--background))",
+                    borderBottom: "1px solid var(--nav-border)",
+                    backdropFilter: "blur(12px)",
+                  }}
+                  className="w-full lg:w-1/2 aspect-video lg:aspect-auto lg:h-auto relative"
+                >
                   <Image
                     src={project.thumbnail}
                     alt={project.name}
@@ -124,7 +132,15 @@ const Projects = async () => {
             }}
           >
             {project.thumbnail && (
-              <div className="w-full aspect-video relative bg-zinc-900">
+              <div
+                style={{
+                  background:
+                    "color-mix(in srgb, var(--accent) 12%, var(--background))",
+                  borderBottom: "1px solid var(--nav-border)",
+                  backdropFilter: "blur(12px)",
+                }}
+                className="w-full aspect-video relative bg-zinc-900"
+              >
                 <Image
                   src={project.thumbnail}
                   alt={project.name}

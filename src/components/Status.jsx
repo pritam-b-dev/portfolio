@@ -6,9 +6,9 @@ const Status = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
           { num: "2+", label: "Years Learning" },
-          { num: "15+", label: "Projects Built" },
-          { num: "5+", label: "Deployed Apps" },
-          { num: "10+", label: "Technologies" },
+          { num: "20+", label: "Projects Built" },
+          { num: "10+", label: "Deployed Apps" },
+          { num: "15+", label: "Technologies" },
         ].map((stat) => (
           <div
             key={stat.label}
