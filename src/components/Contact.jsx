@@ -12,10 +12,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_qwu49rn",
-        "template_gbq9wxi",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
-        "WBLwv2fEeJzRLBFGe",
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       )
       .then(() => {
         toast.success("Message sent successfully!");
