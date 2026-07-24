@@ -40,8 +40,8 @@ const Banner = () => {
           style={{ color: "var(--muted)" }}
         >
           Full-Stack Web Developer passionate about building scalable,
-          AI-powered web applications using Next.js, React, Node.js, Express.js
-          and MongoDB.
+          AI-powered web applications using Next.js, React, TypeScript, Node.js,
+          Express.js and MongoDB.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">

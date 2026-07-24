@@ -29,20 +29,28 @@ const ProjectModal = ({ project, onClose }) => {
           <IoClose size={24} />
         </button>
 
-        <div
-          className="relative w-full aspect-video"
-          style={{
-            background:
-              "color-mix(in srgb,var(--accent) 8%, var(--background))",
-          }}
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
         >
-          <Image
-            src={project.thumbnail}
-            alt={project.name}
-            fill
-            className="object-contain p-8"
-          />
-        </div>
+          <div
+            className="relative w-full aspect-video"
+            style={{
+              background:
+                "color-mix(in srgb,var(--accent) 8%, var(--background))",
+            }}
+          >
+            <Image
+              src={project.thumbnail}
+              alt={project.name}
+              fill
+              title="Click to visit Live Site"
+              className="object-contain p-8 cursor-pointer transition duration-500 hover:scale-105"
+            />
+          </div>
+        </a>
 
         <div className="p-8">
           <h2 className="text-4xl font-black mb-5">{project.name}</h2>

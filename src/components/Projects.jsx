@@ -66,10 +66,12 @@ const Projects = () => {
                   }}
                 >
                   <Image
+                    onClick={() => setSelectedProject(project)}
                     src={project.thumbnail}
                     alt={project.name}
+                    title="Click to view detail"
                     fill
-                    className="object-contain p-6 transition duration-500 hover:scale-105"
+                    className="object-contain p-6 transition duration-500 hover:scale-105 cursor-pointer"
                   />
                 </div>
 
@@ -153,10 +155,12 @@ const Projects = () => {
                 }}
               >
                 <Image
+                  onClick={() => setSelectedProject(project)}
                   src={project.thumbnail}
                   alt={project.name}
                   fill
-                  className="object-contain p-5 transition duration-500 hover:scale-105"
+                  title="Click to view detail"
+                  className="object-contain p-5 transition duration-500 hover:scale-105 cursor-pointer"
                 />
               </div>
 
