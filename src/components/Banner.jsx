@@ -1,11 +1,11 @@
 "use client";
+
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 
 const Banner = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
-      {/* Background subtle grid */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
@@ -15,7 +15,7 @@ const Banner = () => {
         }}
       />
 
-      <div className="relative z-10 animate-fade-in">
+      <div className="relative z-10 animate-fade-in max-w-5xl">
         <p
           className="text-xs font-semibold mb-6 tracking-[0.3em] uppercase px-4 py-2 rounded-full border inline-block"
           style={{
@@ -24,80 +24,69 @@ const Banner = () => {
             background: "color-mix(in srgb, var(--accent) 8%, transparent)",
           }}
         >
-          ✦ Available for work
+          Open to Full-Stack Developer Opportunities
         </p>
+
         <h1
-          className="text-6xl md:text-8xl font-black tracking-tight mb-6 leading-none"
+          className="text-5xl md:text-8xl font-black leading-none mb-6"
           style={{ letterSpacing: "-0.03em" }}
         >
-          Pritam
-          <br />
-          <span style={{ color: "var(--accent)" }}>Bhowmick</span>
+          Hi, I'm <br />
+          <span style={{ color: "var(--accent)" }}>Pritam Bhowmick</span>
         </h1>
+
         <p
-          className="text-base md:text-lg mb-10 max-w-lg mx-auto leading-relaxed"
+          className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10"
           style={{ color: "var(--muted)" }}
         >
-          Full-Stack Web Developer
-          <br />
-          Deeply focused. Relentlessly committed.
+          Full-Stack Web Developer passionate about building scalable,
+          AI-powered web applications using Next.js, React, Node.js, Express.js
+          and MongoDB.
         </p>
-        <div className="flex gap-4 flex-wrap justify-center">
+
+        <div className="flex flex-wrap justify-center gap-4">
           <a href="#projects">
             <button
-              className="px-7 py-3 font-semibold rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
+              className="px-7 py-3 rounded-xl font-semibold cursor-pointer"
               style={{
                 background: "var(--accent)",
                 color: "#fff",
-                boxShadow:
-                  "0 4px 20px color-mix(in srgb, var(--accent) 30%, transparent)",
               }}
             >
               View Projects
             </button>
           </a>
-          <a href="https://github.com/pritam-b-dev" target="_blank">
+
+          <a href="/resume.pdf" target="_blank">
             <button
-              className="px-7 py-3 font-semibold rounded-xl border-2 transition-all duration-200 hover:scale-105 cursor-pointer flex items-center gap-2"
-              style={{ borderColor: "var(--accent)", color: "var(--accent)" }}
-            >
-              <FaGithub size={18} />
-              GitHub
-            </button>
-          </a>
-          <a href="#contact">
-            <button
-              className="px-7 py-3 font-semibold rounded-xl border-2 transition-all duration-200 hover:scale-105 cursor-pointer"
+              className="px-7 py-3 font-semibold rounded-xl transition-all duration-200 hover:scale-105 cursor-pointer"
               style={{
-                borderColor: "var(--accent)",
-                color: "var(--accent)",
+                background: "var(--accent)",
+                color: "#fff",
               }}
             >
-              Contact Me
+              Download Resume
             </button>
           </a>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
-        style={{ color: "var(--muted)" }}
-        onClick={() =>
-          document
-            .getElementById("about")
-            ?.scrollIntoView({ behavior: "smooth" })
-        }
-      >
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <path
-            d="M10 3v14M3 10l7 7 7-7"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <div className="flex justify-center gap-6 mt-10 text-2xl">
+          <a
+            href="https://github.com/pritam-b-dev"
+            target="_blank"
+            style={{ color: "var(--foreground)" }}
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            style={{ color: "var(--foreground)" }}
+          >
+            <FaLinkedin />
+          </a>
+        </div>
       </div>
     </section>
   );

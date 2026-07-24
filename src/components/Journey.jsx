@@ -19,28 +19,28 @@ const Journey = () => {
         {[
           {
             year: "2015",
-            title: "Early Career — Software Support",
-            desc: "Started professional journey in customer support at a software company, developing communication and problem-solving skills.",
+            title: "Software Support Professional",
+            desc: "Started my professional career in software support, developing strong communication, customer interaction, and structured problem-solving skills.",
           },
           {
-            year: "2016 — 2020",
-            title: "Corporate & Industry Roles",
-            desc: "Worked in EPZ industry and insurance head office. Built organizational, analytical, and teamwork experience.",
-          },
-          {
-            year: "2021 — 2022",
-            title: "Data-Focused Work",
-            desc: "Engaged in data entry and administrative tasks, strengthening attention to detail and accuracy.",
+            year: "2016 – 2022",
+            title: "Professional Industry Experience",
+            desc: "Worked across manufacturing, insurance, and administrative roles where I strengthened responsibility, teamwork, discipline, and analytical thinking.",
           },
           {
             year: "2023",
-            title: "Transition to Programming",
-            desc: "Dedicated shift into coding. Began learning JavaScript, Node.js, and backend development fundamentals.",
+            title: "Career Transition into Software Development",
+            desc: "Made a deliberate career transition into programming. Started learning JavaScript, modern web development, backend architecture, databases, and software engineering fundamentals.",
           },
           {
-            year: "2024 — Present",
-            title: "Full-Stack Web Development",
-            desc: "Learning modern web technologies through hands-on projects. Built and deployed full-stack applications using Next.js, Node.js, and MongoDB.",
+            year: "2024",
+            title: "Building Real-World Full-Stack Applications",
+            desc: "Developed multiple production-ready projects using Next.js, Express.js, MongoDB, BetterAuth, REST APIs, authentication systems, dashboards, payments, and AI integrations.",
+          },
+          {
+            year: "2025 — Present",
+            title: "Seeking Full-Stack Software Engineer Opportunity",
+            desc: "Continuously improving software engineering skills while building scalable projects and preparing for opportunities in product-based engineering teams.",
           },
         ].map((item) => (
           <div
