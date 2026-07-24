@@ -57,20 +57,20 @@ const Banner = () => {
             </button>
           </a>
 
-          <a href="/resume.pdf" target="_blank">
+          <a href="#contact">
             <button
-              className="px-7 py-3 font-semibold rounded-xl transition-all duration-200 hover:scale-105 cursor-pointer"
+              className="px-7 py-3 rounded-xl border-2 font-semibold cursor-pointer transition-all hover:scale-105"
               style={{
-                background: "var(--accent)",
-                color: "#fff",
+                borderColor: "var(--accent)",
+                color: "var(--accent)",
               }}
             >
-              Download Resume
+              Contact Me
             </button>
           </a>
         </div>
 
-        <div className="flex justify-center gap-6 mt-10 text-2xl">
+        <div className="flex justify-center items-center gap-7 mt-10 text-2xl">
           <a
             href="https://github.com/pritam-b-dev"
             target="_blank"
@@ -80,7 +80,7 @@ const Banner = () => {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/pritam-b-"
             target="_blank"
             style={{ color: "var(--foreground)" }}
           >

@@ -1,121 +1,128 @@
-import React from "react";
-import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+"use client";
+
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_qwu49rn",
+        "template_gbq9wxi",
+        form.current,
+        "WBLwv2fEeJzRLBFGe",
+      )
+      .then(() => {
+        toast.success("Message sent successfully!");
+        form.current.reset();
+      })
+      .catch(() => {
+        toast.error("Failed to send message!");
+      });
+  };
+
   return (
-    <section
-      id="contact"
-      className="container mx-auto max-w-5xl px-6 py-28 text-center"
-    >
+    <section id="contact" className="container mx-auto px-6 py-28 max-w-4xl">
       <p
-        className="text-xs font-semibold tracking-[0.3em] uppercase mb-4"
+        className="text-xs font-semibold tracking-[0.3em] uppercase mb-4 text-center"
         style={{ color: "var(--accent)" }}
       >
         ✦ Contact
       </p>
 
       <h2
-        className="text-4xl font-black mb-5"
+        className="text-4xl font-black mb-4 text-center"
         style={{ letterSpacing: "-0.02em" }}
       >
-        Let's Build Something Great Together
+        Get In Touch
       </h2>
 
       <p
-        className="max-w-2xl mx-auto text-lg leading-8 mb-12"
+        className="mb-10 text-lg text-center"
         style={{ color: "var(--muted)" }}
       >
-        I'm actively looking for Full-Stack Developer opportunities and always
-        open to collaborating on meaningful products. Feel free to reach out.
+        Have an idea or opportunity? Let's build something amazing together.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-5 mb-12">
-        <div
-          className="rounded-2xl border p-6"
-          style={{
-            background: "var(--card-bg)",
-            borderColor: "var(--card-border)",
-          }}
-        >
-          <FaEnvelope
-            size={28}
-            className="mx-auto mb-4"
-            color="var(--accent)"
+      <div
+        className="rounded-2xl border p-8"
+        style={{
+          background: "var(--card-bg)",
+          borderColor: "var(--card-border)",
+        }}
+      >
+        <form ref={form} onSubmit={sendEmail} className="space-y-5">
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+            className="w-full px-4 py-3 rounded-xl border outline-none"
+            style={{
+              background: "var(--background)",
+              borderColor: "var(--card-border)",
+            }}
           />
-          <h3 className="font-bold mb-2">Email</h3>
-          <p style={{ color: "var(--muted)" }}>pritam.bhowmick@ymail.com</p>
-        </div>
 
-        <div
-          className="rounded-2xl border p-6"
-          style={{
-            background: "var(--card-bg)",
-            borderColor: "var(--card-border)",
-          }}
-        >
-          <FaLinkedin
-            size={28}
-            className="mx-auto mb-4"
-            color="var(--accent)"
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+            className="w-full px-4 py-3 rounded-xl border outline-none"
+            style={{
+              background: "var(--background)",
+              borderColor: "var(--card-border)",
+            }}
           />
-          <h3 className="font-bold mb-2">LinkedIn</h3>
-          <p style={{ color: "var(--muted)" }}>
-            Connect with me professionally.
-          </p>
-        </div>
 
-        <div
-          className="rounded-2xl border p-6"
-          style={{
-            background: "var(--card-bg)",
-            borderColor: "var(--card-border)",
-          }}
-        >
-          <FaGithub size={28} className="mx-auto mb-4" color="var(--accent)" />
-          <h3 className="font-bold mb-2">GitHub</h3>
-          <p style={{ color: "var(--muted)" }}>Explore my open-source work.</p>
-        </div>
-      </div>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            className="w-full px-4 py-3 rounded-xl border outline-none"
+            style={{
+              background: "var(--background)",
+              borderColor: "var(--card-border)",
+            }}
+          />
 
-      <div className="flex flex-wrap justify-center gap-4">
-        <a
-          href="https://mail.google.com/mail/?view=cm&to=pritam.bhowmick@ymail.com"
-          target="_blank"
-        >
+          <textarea
+            name="message"
+            rows={6}
+            placeholder="Write your message..."
+            required
+            className="w-full px-4 py-3 rounded-xl border outline-none resize-none"
+            style={{
+              background: "var(--background)",
+              borderColor: "var(--card-border)",
+            }}
+          />
+
           <button
-            className="px-8 py-3 rounded-xl font-semibold cursor-pointer hover:scale-105 transition"
+            type="submit"
+            className="w-full py-3 rounded-xl font-semibold transition hover:scale-[1.02] cursor-pointer"
             style={{
               background: "var(--accent)",
               color: "#fff",
             }}
           >
-            Send Email
+            Send Message
           </button>
-        </a>
+        </form>
 
-        <a href="https://github.com/pritam-b-dev" target="_blank">
-          <button
-            className="px-8 py-3 rounded-xl border-2 font-semibold cursor-pointer hover:scale-105 transition"
-            style={{
-              borderColor: "var(--accent)",
-              color: "var(--accent)",
-            }}
-          >
-            GitHub
-          </button>
-        </a>
-
-        <a href="https://www.linkedin.com/in/pritam-b-" target="_blank">
-          <button
-            className="px-8 py-3 rounded-xl border-2 font-semibold cursor-pointer hover:scale-105 transition"
-            style={{
-              borderColor: "var(--accent)",
-              color: "var(--accent)",
-            }}
-          >
-            LinkedIn
-          </button>
-        </a>
+        <div
+          className="mt-8 pt-6 border-t text-center space-y-2"
+          style={{ borderColor: "var(--card-border)" }}
+        >
+          <p style={{ color: "var(--muted)" }}>📧 pritam.bhowmick@ymail.com</p>
+          <p style={{ color: "var(--muted)" }}>📞 +8801716349480</p>
+        </div>
       </div>
     </section>
   );

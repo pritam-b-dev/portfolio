@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { FaDownload } from "react-icons/fa";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -61,14 +62,13 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="/resume.pdf"
+            href="/resume/Pritam_Bhowmick_Resume.pdf"
             target="_blank"
-            className="px-5 py-2 rounded-xl text-sm font-semibold transition hover:scale-105"
-            style={{
-              background: "var(--accent)",
-              color: "#fff",
-            }}
+            download
+            className="flex items-center gap-2 text-xl font-semibold hover:opacity-70 transition"
+            style={{ color: "var(--accent)" }}
           >
+            <FaDownload />
             Resume
           </a>
         </div>
@@ -106,15 +106,14 @@ const Navbar = () => {
             ))}
 
             <a
-              href="/resume.pdf"
+              href="/resume/Pritam_Bhowmick_Resume.pdf"
               target="_blank"
-              className="mt-2 px-5 py-3 rounded-xl text-center font-semibold"
-              style={{
-                background: "var(--accent)",
-                color: "#fff",
-              }}
+              download
+              className="flex items-center gap-2 text-base font-semibold hover:opacity-70 transition"
+              style={{ color: "var(--accent)" }}
             >
-              Download Resume
+              <FaDownload />
+              Resume
             </a>
           </div>
         </div>

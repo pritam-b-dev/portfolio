@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+
 const skillCategories = [
   {
     title: "Frontend",
@@ -16,7 +19,6 @@ const skillCategories = [
       "Recharts",
     ],
   },
-
   {
     title: "Backend",
     skills: [
@@ -30,7 +32,6 @@ const skillCategories = [
       "Stripe Integration",
     ],
   },
-
   {
     title: "AI",
     skills: [
@@ -41,7 +42,6 @@ const skillCategories = [
       "Context-aware AI Chat",
     ],
   },
-
   {
     title: "Tools",
     skills: ["Git", "GitHub", "Postman", "MongoDB Atlas", "Vercel"],
@@ -49,8 +49,10 @@ const skillCategories = [
 ];
 
 const Skills = () => {
+  const [open, setOpen] = useState("Frontend");
+
   return (
-    <section id="skills" className="container mx-auto max-w-5xl px-6 py-28">
+    <section id="skills" className="container mx-auto max-w-4xl px-6 py-28">
       <p
         className="text-xs font-semibold tracking-[0.3em] uppercase mb-4"
         style={{ color: "var(--accent)" }}
@@ -60,41 +62,61 @@ const Skills = () => {
 
       <h2 className="text-4xl font-black mb-12">Technical Skills</h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        {skillCategories.map((category) => (
-          <div
-            key={category.title}
-            className="rounded-2xl border p-6"
-            style={{
-              background: "var(--card-bg)",
-              borderColor: "var(--card-border)",
-            }}
-          >
-            <h3
-              className="text-xl font-bold mb-5"
-              style={{ color: "var(--accent)" }}
-            >
-              {category.title}
-            </h3>
+      <div className="space-y-4">
+        {skillCategories.map((category) => {
+          const isOpen = open === category.title;
 
-            <div className="flex flex-wrap gap-3">
-              {category.skills.map((skill) => (
+          return (
+            <div
+              key={category.title}
+              className="rounded-2xl border overflow-hidden"
+              style={{
+                background: "var(--card-bg)",
+                borderColor: "var(--card-border)",
+              }}
+            >
+              <button
+                onClick={() => setOpen(isOpen ? "" : category.title)}
+                className="w-full flex justify-between items-center p-6 cursor-pointer"
+              >
                 <span
-                  key={skill}
-                  className="px-4 py-2 rounded-xl border text-sm font-medium transition hover:scale-105"
-                  style={{
-                    borderColor: "var(--accent)",
-                    color: "var(--foreground)",
-                    background:
-                      "color-mix(in srgb, var(--accent) 8%, transparent)",
-                  }}
+                  className="text-xl font-bold"
+                  style={{ color: "var(--accent)" }}
                 >
-                  {skill}
+                  {category.title}
                 </span>
-              ))}
+
+                <ChevronDown
+                  size={22}
+                  className={`transition-transform duration-300 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {isOpen && (
+                <div className="px-6 pb-6">
+                  <div className="flex flex-wrap gap-3">
+                    {category.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-4 py-2 rounded-xl border text-sm font-medium transition hover:scale-105"
+                        style={{
+                          borderColor: "var(--accent)",
+                          color: "var(--foreground)",
+                          background:
+                            "color-mix(in srgb, var(--accent) 8%, transparent)",
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
