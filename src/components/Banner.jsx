@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative">
+    <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 mt-10 relative">
       <div
         className="absolute inset-0 opacity-5"
         style={{
