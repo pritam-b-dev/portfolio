@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { IoClose } from "react-icons/io5";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const ProjectModal = ({ project, onClose }) => {
   if (!project) return null;
@@ -108,25 +109,29 @@ const ProjectModal = ({ project, onClose }) => {
             <a
               href={project.liveUrl}
               target="_blank"
-              className="px-6 py-3 rounded-xl font-semibold"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 hover:scale-105"
               style={{
                 background: "var(--accent)",
                 color: "#fff",
               }}
             >
               Live Demo
+              <FaExternalLinkAlt size={13} />
             </a>
 
             <a
               href={project.githubUrl}
               target="_blank"
-              className="px-6 py-3 rounded-xl border font-semibold"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-xl border font-semibold flex items-center gap-2 transition-all duration-300 hover:scale-105"
               style={{
                 borderColor: "var(--accent)",
                 color: "var(--accent)",
               }}
             >
               GitHub Repository
+              <FaGithub size={15} />
             </a>
           </div>
         </div>

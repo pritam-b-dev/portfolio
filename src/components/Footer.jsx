@@ -23,7 +23,8 @@ const Footer = () => {
           <a
             href="https://github.com/pritam-b-dev"
             target="_blank"
-            className="transition hover:scale-110"
+            rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-125 hover:-translate-y-1 hover:text-[var(--accent)]"
             style={{ color: "var(--foreground)" }}
           >
             <FaGithub size={22} />
@@ -32,7 +33,8 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/pritam-b-"
             target="_blank"
-            className="transition hover:scale-110"
+            rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-125 hover:-translate-y-1 hover:text-[var(--accent)]"
             style={{ color: "var(--foreground)" }}
           >
             <FaLinkedin size={22} />

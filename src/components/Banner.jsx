@@ -74,7 +74,15 @@ const Banner = () => {
           <a
             href="https://github.com/pritam-b-dev"
             target="_blank"
+            rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-125 hover:-translate-y-1"
             style={{ color: "var(--foreground)" }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = "var(--accent)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = "var(--foreground)")
+            }
           >
             <FaGithub />
           </a>
@@ -82,7 +90,15 @@ const Banner = () => {
           <a
             href="https://www.linkedin.com/in/pritam-b-"
             target="_blank"
+            rel="noopener noreferrer"
+            className="transition-all duration-300 hover:scale-125 hover:-translate-y-1"
             style={{ color: "var(--foreground)" }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = "var(--accent)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = "var(--foreground)")
+            }
           >
             <FaLinkedin />
           </a>

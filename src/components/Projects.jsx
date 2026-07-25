@@ -111,6 +111,8 @@ const Projects = () => {
                     <a
                       href={project.liveUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium transition-all duration-300 hover:translate-x-1 hover:underline"
                       style={{ color: "var(--accent)" }}
                     >
                       Live Demo →
@@ -119,6 +121,8 @@ const Projects = () => {
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium transition-all duration-300 hover:translate-x-1 hover:underline"
                       style={{ color: "var(--foreground)" }}
                     >
                       Source Code →
@@ -126,8 +130,8 @@ const Projects = () => {
 
                     <button
                       onClick={() => setSelectedProject(project)}
+                      className="cursor-pointer font-medium transition-all duration-300 hover:translate-x-1 hover:underline"
                       style={{ color: "var(--muted)" }}
-                      className="cursor-pointer"
                     >
                       View Details →
                     </button>
