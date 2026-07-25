@@ -67,3 +67,35 @@ body {
   border-color: var(--accent) !important;
   box-shadow: 0 8px 40px color-mix(in srgb, var(--accent) 15%, transparent);
 }
+
+@keyframes shimmer {
+  0% {
+    left: -35%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+.shimmer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35%;
+  width: 24%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(64, 145, 108, 0.9),
+    transparent
+  );
+  animation: shimmer 3s linear infinite;
+}

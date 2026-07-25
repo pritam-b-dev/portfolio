@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 const skillCategories = [
   {
     title: "Frontend",
+    level: 90,
     skills: [
       "Next.js",
       "React.js",
@@ -21,6 +22,7 @@ const skillCategories = [
   },
   {
     title: "Backend",
+    level: 88,
     skills: [
       "Node.js",
       "Express.js",
@@ -34,6 +36,7 @@ const skillCategories = [
   },
   {
     title: "AI",
+    level: 85,
     skills: [
       "AI Integration",
       "Prompt Engineering",
@@ -44,6 +47,7 @@ const skillCategories = [
   },
   {
     title: "Tools",
+    level: 90,
     skills: ["Git", "GitHub", "Postman", "MongoDB Atlas", "Vercel"],
   },
 ];
@@ -62,14 +66,14 @@ const Skills = () => {
 
       <h2 className="text-4xl font-black mb-12">Technical Skills</h2>
 
-      <div className="space-y-4">
+      <div className="space-y-5">
         {skillCategories.map((category) => {
           const isOpen = open === category.title;
 
           return (
             <div
               key={category.title}
-              className="rounded-2xl border overflow-hidden"
+              className="rounded-2xl border overflow-hidden transition-all duration-300"
               style={{
                 background: "var(--card-bg)",
                 borderColor: "var(--card-border)",
@@ -77,21 +81,51 @@ const Skills = () => {
             >
               <button
                 onClick={() => setOpen(isOpen ? "" : category.title)}
-                className="w-full flex justify-between items-center p-6 cursor-pointer"
+                className="w-full p-6 text-left cursor-pointer"
               >
-                <span
-                  className="text-xl font-bold"
-                  style={{ color: "var(--accent)" }}
-                >
-                  {category.title}
-                </span>
+                <div className="flex justify-between items-center mb-5">
+                  <h3
+                    className="text-xl font-bold"
+                    style={{ color: "var(--accent)" }}
+                  >
+                    {category.title}
+                  </h3>
 
-                <ChevronDown
-                  size={22}
-                  className={`transition-transform duration-300 ${
-                    isOpen ? "rotate-180" : ""
-                  }`}
-                />
+                  <ChevronDown
+                    size={22}
+                    className={`transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div
+                    className="flex-1 h-2.5 rounded-full overflow-hidden"
+                    style={{
+                      background: "var(--card-border)",
+                    }}
+                  >
+                    <div
+                      className="relative h-full rounded-full overflow-hidden transition-all duration-700"
+                      style={{
+                        width: `${category.level}%`,
+                        background:
+                          "linear-gradient(90deg,#1b4332 0%,#2d6a4f 55%,#40916c 100%)",
+                        boxShadow: "0 0 10px rgba(45,106,79,.35)",
+                      }}
+                    >
+                      <span className="shimmer"></span>
+                    </div>
+                  </div>
+
+                  <span
+                    className="text-sm font-semibold min-w-[44px]"
+                    style={{ color: "var(--muted)" }}
+                  >
+                    {category.level}%
+                  </span>
+                </div>
               </button>
 
               {isOpen && (
@@ -100,12 +134,12 @@ const Skills = () => {
                     {category.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-4 py-2 rounded-xl border text-sm font-medium transition hover:scale-105"
+                        className="px-4 py-2 rounded-xl border text-sm font-medium transition-all duration-300 hover:scale-105"
                         style={{
                           borderColor: "var(--accent)",
                           color: "var(--foreground)",
                           background:
-                            "color-mix(in srgb, var(--accent) 8%, transparent)",
+                            "color-mix(in srgb,var(--accent) 8%,transparent)",
                         }}
                       >
                         {skill}
