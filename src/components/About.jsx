@@ -38,8 +38,9 @@ const About = () => {
           </p>
 
           <p>
-            My primary stack includes Next.js, React.js, Node.js, Express.js,
-            MongoDB, Tailwind CSS and BetterAuth.
+            My primary stack includes Next.js, React.js, TypeScript, Node.js,
+            Express.js, Stripe, PostgreSQL, Prisma, MongoDB, Tailwind CSS and
+            BetterAuth.
           </p>
 
           <p>

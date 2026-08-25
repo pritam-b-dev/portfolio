@@ -27,6 +27,8 @@ const skillCategories = [
       "Node.js",
       "Express.js",
       "REST API",
+      "PostgreSQL",
+      "Prisma",
       "MongoDB",
       "BetterAuth",
       "JWT Authentication",

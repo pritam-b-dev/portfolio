@@ -41,7 +41,7 @@ const Banner = () => {
         >
           Full-Stack Web Developer passionate about building scalable,
           AI-powered web applications using Next.js, React, TypeScript, Node.js,
-          Express.js and MongoDB.
+          Express.js, Stripe, PostgreSQL, Prisma and MongoDB.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
