@@ -106,7 +106,7 @@ const Navbar = () => {
             ))}
 
             <a
-              href="/resume/Pritam_Bhowmick_Resume.pdf"
+              href="/resume/Resume_Pritam_Bhowmick.pdf"
               target="_blank"
               download
               className="flex items-center gap-2 text-base font-semibold hover:opacity-70 transition"
