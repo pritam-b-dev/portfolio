@@ -62,7 +62,7 @@ const Navbar = () => {
         {/* Right Side */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="/resume/Pritam_Bhowmick_Resume.pdf"
+            href="/resume/Resume_Pritam_Bhowmick.pdf"
             target="_blank"
             download
             className="flex items-center gap-2 text-xl font-semibold hover:opacity-70 transition"
